@@ -1,0 +1,27 @@
+{{ block title }}<center>Resultados</center>{{ endblock }}
+{{ block content }}
+<center>
+<div class="card- bg-light m-3">
+    <div class="card- body">
+    
+    {{if group.acepta == 1 }} 
+        
+            El {{ C.VENDEDOR_ROLE }} aceptó la contraoferta del comprador de {{ group.contraoferta}}.<br>
+            ¡Ganaste! {{ player.payoff}} 
+        
+    {{else}}
+
+           El {{ C.VENDEDOR_ROLE }}  no aceptó la contraoferta del comprador de {{ group.contraoferta}}. <br> 
+           Por tanto, las ganancias para esta ronda son de {{ player.payoff}} 
+
+    
+    {{formfields }}
+    {{ endif }}
+
+
+</div>
+</div>
+
+{{ next_button }} </center>
+
+{{ endblock }}

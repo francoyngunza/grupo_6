@@ -1,0 +1,26 @@
+{{ block title }}<center>ContraOferta</center>{{ endblock }}
+{{ block content }}
+<div class="card bg-light m-3">
+<div class="card body">
+
+    <h6>
+        <center> Contraoferta del Comprador </center>
+    </h6>
+    <p>Tu eres <strong> {{ C.COMPRADOR_ROLE}} </strong> <br>
+        La proporcion es {{ group.proporcion}}. El vendedor ofertó {{ group.oferta}}<br>
+
+        Por favor indique su contraoferta <br>
+        
+    </p>
+
+{{ formfields }}
+<center>{{ next_button }}</center>
+        
+{{ endblock }}
+
+    
+
+  
+
+
+

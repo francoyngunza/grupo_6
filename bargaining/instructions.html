@@ -1,0 +1,57 @@
+{{ block title }}<center>Instrucciones</center>{{ endblock }}
+
+{{ block content }}
+
+
+<div class="card bg-light m-3">
+    <div class="card body">
+
+    <p>  
+        Imagina que se realizará la venta de una casa entre un vendedor (propietario de inmueble) y un comprador. <br> 
+        Se le informará si es Comprador o Vendedor y se le asignará al otro participante en el otro rol. Por ejemplo, si lo seleccionan como
+        Comprador, se le asignará de forma anónima otro participante que sea Vendedor. <br>
+    </p>
+    <p>
+        Además, el inmueble posee un valor de mercado, el cual será asignado aleatoriamente en su ordenador y podrá tomar 
+        cualquiera de los siguentes valores 10, 15, 25, 30, 35, 40, 45, ..., 95 UME (unidades monetarias experimentales). Sin embargo, el valor real
+        de dicha empresa es una proporción de ese valor, el cual será valuado por el vendedor. Esta proporción se asignará aleatoriamente y 
+        tomará cualquiera de los siguentes valores 0.1, 0.2,0.3, 0.4,...,0.9. 
+    </p>
+    <p>
+        El juego cuenta de 10 rondas, en cada una de ellas se le emparejará anonima y aleatoriamente con un jugador con un rol diferente al suyo. 
+        Si usted es el vendedor conocerá el valor de mercado y la proporción. Su objetivo será lograr un trato donde el precio de venta de la casa sea mayor al valor real de la casa (Valor de mercado x proporción) 
+        Si usted es comprador solo conocerá la proporción, mas no el valor de mercado. Como comprador se le asignará en cada ronda 100 monedas. Su objetivo será lograr un trato donde el precio de compra de la casa sea uno menor al valor de mercado de la casa, el cual como comprador no conoce. <br>
+    </p>
+    <p>
+        La dinamica será la siguente, el vendedor después de conocer el valor de mercado y la valuación de la casa (proporción), lanzará una oferta de venta al comprador, la cual tomará un valor entero de 0 a 100.
+        Después de conocer dicha oferta el comprador decidirá si esta de acuerdo o no con dicho valor. Si lo esta, hay trato y se acaba la ronda. Si no lo está, podrá lanzar una contraoferta al vendedor, el valor de dicha contraoferta será un valor entero entre 0 y 100. <br>
+        Después de conocer dicha contraoferta el vendedor, decide si acepta el trato o no. En cualquiera de los casos se termina la ronda con o sin trato, y se pasará a la siguente ronda donde se seguirá con la misma dinamica.
+        Si ambos jugadores no llegan a un acuerdo, entonces, obtendrán una ganancia de 0.
+    </p>
+    <p>
+    <h6>
+        Cálculo de ganancias: <br>
+    </h6>
+            Para vendedor: Precio de venta/compra - Precio real (valor de mercado x proporción) <br>
+            Para comprador: Valor de mercado - Precio de venta/compra <br>       
+    
+    </p>
+    <p>
+        <center><strong> Si tiene alguna duda, levante la mano</strong></center>
+    </p>
+    {{ formfields }}
+
+    <center>{{ next_button }}</center>
+    
+</div>
+</div>
+
+{{ include_sibling 'instructions.html' }}
+
+{{ endblock }}
+
+
+
+
+
+

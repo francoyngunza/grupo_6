@@ -1,0 +1,20 @@
+{{ block title }}<center>Decisión Final</center>{{ endblock }}
+{{ block content }}
+<div class="card bg-light m-3">
+<div class="card body">
+
+    
+    <strong> <center> Decisión Final </center> </strong>
+    
+    <p>
+        El {{ C.COMPRADOR_ROLE}} te ha contraofertado {{ group.contraoferta}} <br>
+    </p>
+    
+    <p>
+        Por favor decida si acepta o no <br>
+    </p>
+
+{{ formfields }}
+<center>{{ next_button }}</center>
+        
+{{ endblock }}

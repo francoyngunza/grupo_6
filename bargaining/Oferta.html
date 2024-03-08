@@ -1,0 +1,29 @@
+{{ block title }}<center>Oferta</center>{{ endblock }}
+{{ block content }}
+<div class="card bg-light m-3">
+<div class="card body">
+
+    <h6>
+        <center> Oferta del vendedor </center>
+    </h6>
+    <p>Tu eres el <strong> {{ C.VENDEDOR_ROLE}} </strong> <br>
+        Valores: El valor de la empresa es {{ group.valor_empresa }} y la proporcion de la empresa es {{ group.proporcion }}
+     
+        
+        
+
+    </p>
+
+{{ formfields }}
+<center>{{ next_button }}</center>
+    
+
+  
+
+
+</div>
+</div>
+{{ endblock }}
+
+
+
